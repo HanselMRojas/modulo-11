@@ -2,7 +2,7 @@
 Este modulo sireve para calcular el digito de verificación de un NIT o RUT de la entidad Tributaria __DIAN__ en __Colombia__. 
 
 ### Ejemplo Básico
-El siguiente ejemplo solo es de uso didactico. Tomamos como ejemplo un nit empresarial econtrado en [esta fuente:](http://190.27.245.106/BLA/resoluciones/RESOLUCIONES%202009/4698.pdf)
+El siguiente ejemplo solo es de uso didáctico. Tomamos como ejemplo un NIT empresarial econtrado en [esta fuente:](http://190.27.245.106/BLA/resoluciones/RESOLUCIONES%202009/4698.pdf)
 
 ```javascript
 	var modulo = require('modulo-11')
