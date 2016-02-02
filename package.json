@@ -1,7 +1,6 @@
 {
   "name": "modulo-11",
   "version": "1.0.0",
-  "private": true,
   "description": "Número de verificacion Dian",
   "main": "index.js",
   "directories": {
@@ -16,7 +15,7 @@
   "keywords": [
     "dian",
     "digito de verificacion",
-    "modulo 11",
+    "modulo 11"
   ],
   "author": "Hansel Morales",
   "license": "Apache-2.0"
