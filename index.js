@@ -33,15 +33,15 @@ module.exports = (nit, series) => {
 	this.nit = nit.toString().split("")
 	this.series = (series || [71,67,59,53,47,43,41,37,29,23,19,17,13,7,3])
 
-	var count = 0;
 	/** 
 	 *	Get Diference between series and nit and 
 	 *	Equality Nit Array 
 	 */
 	var diff = helper.validate(this.series.length - this.nit.length)
-	var context = helper.match(diff, this.nit)
+	var context = helper.addZero(diff, this.nit)
 
 	/** Multiply each number in strict order */
+	var count = 0;
 	this.series.forEach((num, indx) => {
 		count += num * parseInt(context[indx])
 	}) 	
