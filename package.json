@@ -1,11 +1,15 @@
 {
   "name": "modulo-11",
-  "version": "1.1.0",
-  "description": "Modulo 11 - Digito de Verificación Registro Único Tributario",
+  "version": "1.1.1",
+  "description": "Modulo 11 - Digito de Verificación basado en el número de identificación tributario",
   "main": "index.js",
   "directories": {
     "example": "examples",
     "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/H2OOPS/modulo-11.git"
   },
   "devDependencies": {
     "babel-core": "^6.7.2",
@@ -24,8 +28,13 @@
   "keywords": [
     "dian",
     "digito de verificacion",
+    "numero de identificación tributario",
     "modulo 11"
   ],
-  "author": "Hansel Morales",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "author": {
+    "name": "h2oops",
+    "email": "27hdmr@gmail.com",
+    "url": "http://hansel.site"
+  }
 }
