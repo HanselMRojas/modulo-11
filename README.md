@@ -8,7 +8,7 @@ El siguiente ejemplo solo es de uso didáctico. Tomamos como ejemplo un NIT empr
 	var modulo = require('modulo-11')
 	var nit = '830091684' // NIT: Cocacola FEMSA Colombia S.A
 
-	modulo(nit) // 8
+	modulo.calc(nit) // Esto retorna 8
 ```
 
 ## TODO
