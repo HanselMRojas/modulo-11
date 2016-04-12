@@ -27,7 +27,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Modulo = function () {
-	function Modulo(nit, series) {
+	function Modulo() {
 		_classCallCheck(this, Modulo);
 
 		this.calc = this.calculate;
@@ -42,9 +42,9 @@ var Modulo = function () {
 
 
 	_createClass(Modulo, [{
-		key: "calculate",
+		key: 'calculate',
 		value: function calculate(nit, series) {
-			this.nit = nit.toString().split("");
+			this.nit = nit.toString().replace(/\D/g, '').trim().split("");
 			this.series = series || [71, 67, 59, 53, 47, 43, 41, 37, 29, 23, 19, 17, 13, 7, 3];
 
 			/** 
@@ -69,7 +69,7 @@ var Modulo = function () {
 		/** Validate */
 
 	}, {
-		key: "validate",
+		key: 'validate',
 		value: function validate(diff) {
 			if (diff >= 0) {
 				return diff;
@@ -81,7 +81,7 @@ var Modulo = function () {
 		/** Add Zero */
 
 	}, {
-		key: "addZero",
+		key: 'addZero',
 		value: function addZero(times, nit) {
 			if (times !== 0) {
 				for (var i = 0; i < times; i++) {

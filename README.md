@@ -2,20 +2,21 @@
 Este modulo sireve para calcular el digito de verificación de un NIT o RUT de la entidad Tributaria __DIAN__ en __Colombia__. 
 
 ### Ejemplo Básico
-El siguiente ejemplo solo es de uso didáctico. Tomamos como ejemplo un NIT empresarial econtrado en [esta fuente:](http://190.27.245.106/BLA/resoluciones/RESOLUCIONES%202009/4698.pdf)
+El siguiente ejemplo solo es de uso didáctico. Tomamos como ejemplo un NIT empresarial econtrado al azar. En este caso el de Cocacola FEMSA
 
 ```javascript
-	var modulo = require('modulo-11')
-	var nit = '830091684' // NIT: Cocacola FEMSA Colombia S.A
+	var modulo = require('modulo-11');
+	var nit = '830.091.684'; // NIT: Cocacola FEMSA Colombia S.A
+	var withLines = '830-091-684';
 
-	modulo.calc(nit) // Esto retorna 8
+	var nitConFormato = ´${nit}-${modulo.calc(nit)}´; //  830.091.684-8
 ```
 
 ## TODO
-- Validar numeros separados por puntos, comas, espacios y guiones.
 - Crear funcion helper que ayude a formatear el NIT de distintas maneras.
 - Crear Pruebas Unitarias. 
-- Publicar en NPM.
+- Crear builds para el browser.
+- Publicar en algún cdn.
 
 # Licencia
 Copyright 2016 Hansel Morales
