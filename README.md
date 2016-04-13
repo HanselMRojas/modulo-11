@@ -9,11 +9,14 @@ El siguiente ejemplo solo es de uso didáctico. Tomamos como ejemplo un NIT empr
 	var nit = '830.091.684'; // NIT: Cocacola FEMSA Colombia S.A
 	var withLines = '830-091-684';
 
+	/** ES2015: */
 	var nitConFormato = ´${nit}-${modulo.calc(nit)}´; //  830.091.684-8
+
+	/** ES5: */
+	var nitConFormato = nit + '-' + modulo.cal(nit); //  830.091.684-8
 ```
 
 ## TODO
-- Crear funcion helper que ayude a formatear el NIT de distintas maneras.
 - Crear Pruebas Unitarias. 
 - Crear builds para el browser.
 - Publicar en algún cdn.
