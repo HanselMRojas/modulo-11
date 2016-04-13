@@ -7,18 +7,23 @@ El siguiente ejemplo solo es de uso didáctico. Tomamos como ejemplo un NIT empr
 ```javascript
 	var modulo = require('modulo-11');
 	var nit = '830.091.684'; // NIT: Cocacola FEMSA Colombia S.A
-	var withLines = '830-091-684';
+	var nitConLineas = '830-091-684';
+
+	modulo.calc(nit); // 8
 
 	/** ES2015: */
-	var nitConFormato = ´${nit}-${modulo.calc(nit)}´; //  830.091.684-8
+	var nitConFormato = `${nit}-${modulo.calc(nit)}`; //  830.091.684-8
 
 	/** ES5: */
-	var nitConFormato = nit + '-' + modulo.cal(nit); //  830.091.684-8
+	var nitConFormato = nitConLineas + '-' + modulo.calc(nit); //  830-091-684-8
+
+	/** Helper Format */
+	var basico = modulo.format(nit) //  '830091684-8';
 ```
 
 ## TODO
 - Crear Pruebas Unitarias. 
-- Crear builds para el browser.
+- Crear builds para browser.
 - Publicar en algún cdn.
 
 # Licencia

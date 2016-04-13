@@ -31,12 +31,13 @@ var Modulo = function () {
 		_classCallCheck(this, Modulo);
 
 		this.calc = this.calculate;
+		this.format = this.format;
 	}
 
 	/** 
   *	Calculate 
   *	
-  *	@param nit {number}
+  *	@param nit {number || string}
  	 *	@param series {array}
   */
 
@@ -64,6 +65,24 @@ var Modulo = function () {
 			var digit = modulo === 0 || modulo === 1 ? modulo : 11 - modulo;
 
 			return digit;
+		}
+
+		/** 
+   *	Format 
+   *	
+   *	@param nit {number || string}
+   */
+
+	}, {
+		key: 'format',
+		value: function format(nit) {
+			if (nit) {
+				var basicFormat = nit.toString().replace(/\D/g, '').trim() + '-' + this.calculate(nit);
+				return basicFormat;
+			} else {
+				var error = new Error('No hay un número valido');
+				throw TypeError(error);
+			}
 		}
 
 		/** Validate */
