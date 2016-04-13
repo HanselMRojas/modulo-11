@@ -2,7 +2,7 @@
 Este modulo sireve para calcular el digito de verificación de un NIT o RUT de la entidad Tributaria __DIAN__ en __Colombia__. 
 
 ### Ejemplo Básico
-El siguiente ejemplo solo es de uso didáctico. Tomamos como ejemplo un NIT empresarial econtrado al azar. En este caso el de Cocacola FEMSA
+El siguiente ejemplo solo es de uso didáctico. Tomamos como ejemplo un NIT empresarial econtrado al azar. En este caso el de Cocacola FEMSA Colombia.
 
 ```javascript
 	var modulo = require('modulo-11');
@@ -20,6 +20,8 @@ El siguiente ejemplo solo es de uso didáctico. Tomamos como ejemplo un NIT empr
 	/** Helper Format */
 	var basico = modulo.format(nit) //  '830091684-8';
 ```
+
+Tener en cuenta que las funciones __modulo.calc()__ y __modulo.format()__ adminten tanto numeros enteros como strings. 
 
 ## TODO
 - Crear Pruebas Unitarias. 
