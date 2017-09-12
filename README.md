@@ -5,20 +5,18 @@ Este modulo sireve para calcular el digito de verificación de un NIT o RUT de l
 El siguiente ejemplo solo es de uso didáctico. Tomamos como ejemplo un NIT empresarial econtrado al azar. En este caso el de Cocacola FEMSA Colombia.
 
 ```javascript
-	var modulo = require('modulo-11');
-	var nit = '830.091.684'; // NIT: Cocacola FEMSA Colombia S.A
-	var nitConLineas = '830-091-684';
+	
+/** ES2015: */
+import modulo from 'modulo-11'
 
-	modulo.calc(nit); // 8
+/** ES5: */
+var modulo = require('modulo-11')
 
-	/** ES2015: */
-	var nitConFormato = `${nit}-${modulo.calc(nit)}`; //  830.091.684-8
+/* modulo.calc => 0 */
+modulo.calc(nit) // Obtiene unicamente el digito de verificación 
 
-	/** ES5: */
-	var nitConFormato = nitConLineas + '-' + modulo.calc(nit); //  830-091-684-8
-
-	/** Helper Format */
-	var basico = modulo.format(nit) //  '830091684-8';
+/** modulo.format => '${nit}-0' */
+modulo.format(nit) //  '000000000-0' ;
 ```
 
 Tener en cuenta que las funciones __modulo.calc()__ y __modulo.format()__ adminten tanto numeros enteros como strings. 
