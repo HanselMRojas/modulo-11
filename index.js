@@ -2,14 +2,14 @@
 /**
  *	Copyright 2016 Hansel Morales
  *
- *	Licensed under the Apache License, Version 2.0 (the "License");
+ *	Licensed under the Apache License, Version 2.0 (the 'License')
  *	you may not use this file except in compliance with the License.
  *	You may obtain a copy of the License at
  *
  *	    http://www.apache.org/licenses/LICENSE-2.0
  *
  *	Unless required by applicable law or agreed to in writing, software
- *	distributed under the License is distributed on an "AS IS" BASIS,
+ *	distributed under the License is distributed on an 'AS IS' BASIS,
  *	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *	See the License for the specific language governing permissions and
  *	limitations under the License.
@@ -44,8 +44,11 @@ var Modulo = function () {
 
 	_createClass(Modulo, [{
 		key: 'calculate',
-		value: function calculate(nit, series) {
-			this.nit = nit.toString().replace(/\D/g, '').trim().split("");
+		value: function calculate() {
+			var nit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+			var series = arguments[1];
+
+			this.nit = nit.toString().replace(/\D/g, '').trim().split('');
 			this.series = series || [71, 67, 59, 53, 47, 43, 41, 37, 29, 23, 19, 17, 13, 7, 3];
 
 			/** 
@@ -75,13 +78,14 @@ var Modulo = function () {
 
 	}, {
 		key: 'format',
-		value: function format(nit) {
+		value: function format() {
+			var nit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
 			if (nit) {
 				var basicFormat = nit.toString().replace(/\D/g, '').trim() + '-' + this.calculate(nit);
 				return basicFormat;
 			} else {
-				var error = new Error('No hay un número valido');
-				throw TypeError(error);
+				return 0;
 			}
 		}
 
@@ -93,7 +97,7 @@ var Modulo = function () {
 			if (diff >= 0) {
 				return diff;
 			} else {
-				throw TypeError("El nit ingresado no es valido");
+				throw TypeError('El nit ingresado no es valido');
 			}
 		}
 
